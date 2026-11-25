@@ -120,5 +120,7 @@ mkdir -p out && MAKEFUN_BOT_DIR=. MAKEFUN_OUTPUT_DIR=out node main.ts
 ```
 
 Dengan `POST.json` masih placeholder, program sengaja gagal dengan pesan yang
-jelas. Setelah URL asli diisi, `out/POST.json` akan byte-identik dengan
-`POST.json` di repo.
+jelas. Setelah URL asli diisi, `out/POST.json` berisi alamat kanonisnya
+(`https://x.com/<handle>/status/<id>`) — link yang disalin dari X dengan
+parameter pelacak (`?s=20` dsb.), host mobile/www, atau garis miring di akhir
+tetap menghasilkan output yang sama.
